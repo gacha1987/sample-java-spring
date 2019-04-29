@@ -1,6 +1,9 @@
 package hello.hello.domain;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CustomerRepository extends CrudRepository<Customer, Long> {
+import java.util.List;
+
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
+    public List<Customer> findByName(String name);
 }
