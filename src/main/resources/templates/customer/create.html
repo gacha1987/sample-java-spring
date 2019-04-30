@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>book list</title>
+  </head>
+  <body>
+    <h1 th:text="'顧客追加'"></h1>
+    <form action="/customer/add" method="post">
+      <p><label>名前：<input type="text" name="name" size="40"></label></p>
+      <p><label>年齢：<input type="text" name="age" size="20"></label></p>
+      <p><input type="submit" value="送信"><input type="reset" value="リセット"></p>
+    </form>
+    <a href="/customer/">戻る</a>
+  </body>
+</html>
