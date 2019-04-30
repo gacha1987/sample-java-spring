@@ -37,10 +37,7 @@ public class CustomerController {
 
     @PostMapping(path="/add")
     public String addCustomer(@RequestParam String name, @RequestParam int age) {
-        Customer customer = new Customer();
-        customer.setName(name);
-        customer.setAge(age);
-        customerRepository.save(customer);
+        this.customerService.save(name, age);
         return "customer/complete";
     }
 }
