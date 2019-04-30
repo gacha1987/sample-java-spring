@@ -19,4 +19,11 @@ public class CustomerService {
         }
         return this.customerRepository.findByName(search);
     }
+
+    public void save(String name, int age) {
+        Customer customer = new Customer();
+        customer.setName(name);
+        customer.setAge(age);
+        this.customerRepository.save(customer);
+    }
 }
