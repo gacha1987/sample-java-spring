@@ -17,7 +17,7 @@ public class CustomerService {
         if (search == null || search.isEmpty()) {
             return this.customerRepository.findAll();
         }
-        return this.customerRepository.findByName(search);
+        return this.customerRepository.findByNameLike(search);
     }
 
     public void save(String name, int age) {
